@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<body ng-app = "tags">
+  <div ng-controller = "tagsController">
+    <input ng-model = "tagValue"><button ng-click="addTag(tagValue)">Add</button>
+    <br>
+    <div ng-repeat = "tagName in tagList track by $index">
+      <small ng-show = "tagFlag[$index]">{{tagName}}</small>&nbsp;<a href='' ng-show = "tagFlag[$index]" ng-click= 'removeTag($index)'>x</a><br></div>
+    
+  </div>
+
+</body>
+</html>
